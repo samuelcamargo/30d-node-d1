@@ -1,0 +1,51 @@
+Exercício: API To-Do List - dia 1
+Objetivo
+Criar uma API para gerenciar uma lista de tarefas utilizando Node.js, Express e JavaScript. A API deve permitir criar, ler, atualizar e excluir tarefas.
+
+Requisitos
+### Node.js e Express: Crie um servidor usando o Express.
+
+Rotas da API:
+### GET /tasks: Retorna todas as tarefas.
+### GET /tasks/:id: Retorna uma tarefa específica com base no ID.
+### POST /tasks: Adiciona uma nova tarefa.
+### PUT /tasks/:id: Atualiza uma tarefa com base no ID.
+### DELETE /tasks/:id: Remove uma tarefa com base no ID.
+
+Estrutura da Tarefa:
+Cada tarefa deve ter um id único, title (título da tarefa) e completed (status da tarefa).
+Exemplo de estrutura de uma tarefa:
+json
+
+Copiar código
+{
+  "id": 1,
+  "title": "Estudar Node.js",
+  "completed": false
+}
+
+Armazenamento em Memória: Não é necessário usar um banco de dados. Armazene os dados em um array de objetos.
+Instruções
+Configuração do Projeto:
+
+Inicie um projeto Node.js: npm init -y
+Instale o Express: npm install express
+Estrutura do Servidor:
+
+Crie um arquivo server.js para configurar o servidor.
+Importe o Express e configure as rotas conforme descrito nos requisitos.
+Rotas:
+
+GET /tasks: Retorna todas as tarefas no array.
+GET /tasks/
+: Busca uma tarefa pelo id no array e retorna a tarefa específica.
+POST /tasks: Adiciona uma nova tarefa ao array. O title deve vir do corpo da requisição, e o completed deve ser inicializado como false.
+PUT /tasks/
+: Atualiza o title e completed da tarefa com base no id.
+DELETE /tasks/
+: Remove a tarefa com o id especificado do array.
+Teste a API:
+
+Use o Postman ou uma ferramenta similar para testar as rotas GET, POST, PUT e DELETE.
+Desafio Extra
+Adicione uma funcionalidade para filtrar tarefas por status de conclusão (completed: true ou completed: false) usando uma query string, como /tasks?completed=true.
